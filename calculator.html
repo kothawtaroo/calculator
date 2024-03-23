@@ -14,20 +14,47 @@
         <input id="s_number" type="text" placeholder="Second Number">
     </p>
     <p>
-        Your answer is: <span id="asnwer"></span>
+        Your answer is: <span id="answer"></span>
     </p>
     <p>
         <input onclick="add()" type="button" value="+">
         <input onclick="substr()" type="button" value="-">
+        <input onclick="multi()" type="button" value="x">
+        <input onclick="dived()" type="button" value="/">
     </p>
 </body>
 <script>
     function add(){
-        var num1 = document.getElementById("f_number").value;
-        var num2 = document.getElementById("s_number").value;
-        var result = parseInt(num1)+parseInt(num2);
-        // console.log(result)
+        let num1 = document.getElementById("f_number").value;
+        let num2 = document.getElementById("s_number").value;
+        let result = parseInt(num1)+parseInt(num2);
+        console.log(result)
         document.getElementById("answer").innerHTML=result;
+    }
+
+    
+    function substr(){
+        let num1 = document.getElementById("f_number").value;
+        let num2 = document.getElementById("s_number").value;
+        let sub = parseInt(num1)-parseInt(num2);
+        console.log(sub)
+        document.getElementById("answer").innerHTML=sub;
+    }
+
+    function multi(){
+        let num1 = document.getElementById("f_number").value;
+        let num2 = document.getElementById("s_number").value;
+        let multi = parseInt(num1)*parseInt(num2);
+        console.log(multi)
+        document.getElementById("answer").innerHTML=multi;
+    }
+
+    function dived(){
+        let num1 = document.getElementById("f_number").value;
+        let num2 = document.getElementById("s_number").value;
+        let dived = parseInt(num1)/parseInt(num2);
+        console.log(dived)
+        document.getElementById("answer").innerHTML=dived;
     }
 </script>
 </html>
